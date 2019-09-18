@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/ic_home"
+            android:checkable="true"
+            android:title="@string/main" />
+        <item
+            android:id="@+id/menu_message"
+            android:icon="@drawable/ic_message"
+            android:checkable="true"
+            android:title="@string/messages" />
+        <item
+            android:id="@+id/menu_calendar"
+            android:icon="@drawable/ic_calendar"
+            android:checkable="true"
+            android:title="@string/calendar" />
+        <item
+            android:id="@+id/menu_businesscardholder"
+            android:icon="@drawable/ic_business_card_holder"
+            android:checkable="true"
+            android:title="@string/businesscardholder" />
+        <item
+            android:id="@+id/menu_weather"
+            android:icon="@drawable/ic_weather"
+            android:checkable="true"
+            android:title="@string/weather" />
+        <item
+            android:id="@+id/menu_news"
+            android:icon="@drawable/ic_news"
+            android:checkable="true"
+            android:title="@string/news" />
+        <item
+            android:id="@+id/menu_profil"
+            android:icon="@drawable/ic_profil"
+            android:checkable="true"
+            android:title="@string/profil" />
+    </group>
+
+</menu>

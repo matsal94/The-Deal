@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registryActivity">
+
+    <activity
+        android:id="@+id/registryActivity"
+        android:name="co.sepin.thedeal.RegistryActivity"
+        android:label="activity_registry"
+        tools:layout="@layout/activity_registry" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="co.sepin.thedeal.LoginActivity"
+        android:label="activity_login2"
+        tools:layout="@layout/activity_login2" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="co.sepin.thedeal.MainActivity"
+        android:label="content_main"
+        tools:layout="@layout/content_main" />
+    <activity
+        android:id="@+id/addDealActivity"
+        android:name="co.sepin.thedeal.AddDealActivity"
+        android:label="activity_adddeal"
+        tools:layout="@layout/activity_adddeal" />
+    <activity
+        android:id="@+id/drawerClass"
+        android:name="co.sepin.thedeal.application.DrawerClass"
+        android:label="activity_drawer"
+        tools:layout="@layout/activity_drawer" />
+</navigation>

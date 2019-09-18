@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registry_background"
+    tools:context=".LoginActivity"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="41dp">
+
+    <TextView
+        android:id="@+id/login_veryficationTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="400dp"
+        android:fontFamily="@font/koho_regular"
+        android:gravity="center"
+        android:text="@string/verification_title"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/nunito" />
+
+    <ProgressBar
+        android:id="@+id/loginPB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:indeterminateTintMode="src_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_veryficationTV" />
+
+    <EditText
+        android:id="@+id/login_codeET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_edittext_layout"
+        android:enabled="false"
+        android:fontFamily="@font/nunito_light"
+        android:gravity="center"
+        android:hint="@string/code_hint"
+        android:padding="@dimen/fab_margin"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="@color/colorDisabled"
+        android:textColorHint="@color/colorDisabled"
+        android:textSize="@dimen/text_size2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPB"
+        tools:fontFamily="@font/nunito_light"
+        tools:ignore="Autofill,TextFields" />
+
+    <Button
+        android:id="@+id/login_send_againBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_cp"
+        android:fontFamily="@font/koho_regular"
+        android:onClick="onClickSendAgain"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:text="@string/send_again"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_codeET"
+        tools:fontFamily="@font/nunito_bold" />
+
+    <Switch
+        android:id="@+id/login_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/koho_regular"
+        android:onClick="onClickSwitch"
+        android:text="@string/hand_input_text"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:fontFamily="@font/nunito" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

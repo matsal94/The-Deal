@@ -1,0 +1,119 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+def dbflow_version = "4.2.4"
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3' //dodane
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "co.sepin.thedeal"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.0.0'
+    implementation 'com.google.firebase:firebase-database:19.0.0'
+    implementation 'com.google.firebase:firebase-storage:19.0.0'
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
+    //implementation 'com.mapbox.mapboxsdk:mapbox-android-geocoder:1.0.0@aar'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+
+    implementation "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    implementation "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
+
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:support-compat:28.0.0'
+    //implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    //implementation 'com.android.support:appcompat-v7:28.0.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    implementation 'net.zetetic:android-database-sqlcipher:3.5.9@aar'
+    implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
+    implementation 'br.com.simplepass:loading-button-android:1.6.5'
+//przycisk zarejestruj (RegistryActivity, LoginActivity) NIE UPGRADE'OWAĆ !
+    implementation 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+//przycisk zarejestruj (SelectContactActivity)
+    implementation 'com.github.yukuku:ambilwarna:2.0.1'//kolor picker dialog
+    implementation 'petrov.kristiyan:colorpicker-library:1.1.10'
+    implementation 'com.thebluealliance:spectrum:0.7.1'
+    implementation 'com.gjiazhe:wavesidebar:1.3'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.pwittchen:weathericonview:1.1.0'
+    implementation 'com.github.MatteoBattilana:WeatherView:2.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.master.android:glideimageview:2.1'
+    implementation 'com.daimajia.easing:library:2.1@aar'        //animacje
+    implementation 'com.daimajia.androidanimations:library:2.3@aar' //animacje
+    implementation 'com.alespero:expandable-cardview:0.6' //animacja cardview
+    implementation 'com.andkulikov:transitionseverywhere:2.0.0' //animacje
+    implementation 'com.github.florent37:materialviewpager:1.2.3'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'com.hbb20:ccp:2.3.1'
+    implementation 'gr.pantrif:easy-android-splash-screen:0.0.1' //splash screen
+    implementation 'com.facebook.fresco:fresco:1.9.0' //imageViewer
+    implementation 'com.github.stfalcon:frescoimageviewer:0.5.0' //imageViewer
+    implementation "com.mikepenz:itemanimators:1.1.0" //item animators for RecyclerView
+    implementation "com.mikepenz:fastadapter:3.3.1"
+    implementation 'com.mikepenz:fastadapter-commons:3.3.1'
+    implementation 'com.mikepenz:fastadapter-extensions-expandable:3.3.1'
+    implementation 'com.mikepenz:materialize:1.2.0'
+    implementation 'com.label305:asynctask:1.0.0'
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+
+    //implementation 'jp.wasabeef:blurry:3.0.0' // blurry effect
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    apply plugin: 'com.google.gms.google-services' //firebase
+}

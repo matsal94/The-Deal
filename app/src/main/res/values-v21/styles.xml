@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+        <item name="android:statusBarColor">@color/colorTransparent</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:fontFamily">@font/koho_regular</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar2">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/koho_regular</item>
+        <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+        <item name="android:statusBarColor">@color/colorTransparent</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <style name="AppTheme.ActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:fontFamily">@font/koho_regular</item>
+        <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close_white</item>
+        <item name="actionModeStyle">@style/contextual_action_bar</item>
+    </style>
+
+    <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:fontFamily">@font/koho_regular</item>
+    </style>
+
+    <!-- TextInputLayout error_appearance. -->
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/koho_regular</item>
+    </style>
+
+    <style name="navigation_drawer">
+        <item name="android:textSize">@dimen/detail_text_size</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@color/textColorTertiary</item>
+        <item name="android:fontFamily">@font/koho_regular</item>
+    </style>
+
+    <style name="contextual_action_bar" parent="android:Widget.ActionBar">
+        <item name="background">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorPrimary</item>
+        <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
+        <item name="android:textAppearance">@style/ToolbarTitle</item>
+        <item name="height">?attr/actionBarSize</item>
+        <item name="android:height">?attr/actionBarSize</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="titleTextStyle">@style/ToolbarTitle</item>
+    </style>
+
+</resources>

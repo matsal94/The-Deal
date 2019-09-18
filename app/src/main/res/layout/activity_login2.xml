@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login2_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registry_background"
+    android:focusableInTouchMode="true"
+    tools:context=".LoginActivity"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="41dp">
+
+    <TextView
+        android:id="@+id/login2_veryficationTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="400dp"
+        android:fontFamily="@font/koho_regular"
+        android:gravity="center"
+        android:text="@string/verification_title2"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/nunito" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login2_codeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rounded_edittext_layout"
+        android:textColorHint="@color/colorDisabled"
+        app:errorTextAppearance="@style/error_appearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login2_veryficationTV"
+        tools:ignore="RelativeOverlap">
+
+        <EditText
+            android:id="@+id/login2_codeET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/fab_margin2"
+            android:layout_marginEnd="@dimen/fab_margin2"
+            android:padding="@dimen/fab_margin"
+            android:digits="0123456789"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/nunito_light"
+            android:gravity="center"
+            android:hint="@string/code_hint"
+            android:imeOptions="actionUnspecified"
+            android:importantForAutofill="noExcludeDescendants"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@drawable/edittext_theme"
+            android:textSize="@dimen/text_size2"
+            android:minWidth="300dp"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.267"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:fontFamily="@font/nunito"
+            tools:ignore="TextFields,UnusedAttribute" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+        android:id="@+id/login2_CPBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_cp"
+        android:fontFamily="@font/koho_regular"
+        android:onClick="onClickLogin"
+        android:text="@string/login"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/detail_text_size"
+        app:finalCornerAngle="50dp"
+        app:initialCornerAngle="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spinning_bar_color="@color/white"
+        app:spinning_bar_padding="0dp"
+        app:spinning_bar_width="4dp"
+        tools:fontFamily="@font/nunito_bold">
+
+    </br.com.simplepass.loading_button_lib.customViews.CircularProgressButton>
+<!--
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_next"
+        android:onClick="tmpOnClick"
+        android:text="@string/tmpButton"
+        android:textColor="@color/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

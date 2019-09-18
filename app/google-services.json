@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "51330186482",
+    "firebase_url": "https://thedeal-1bc20.firebaseio.com",
+    "project_id": "thedeal-1bc20",
+    "storage_bucket": "thedeal-1bc20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51330186482:android:592c9b39bba5913a",
+        "android_client_info": {
+          "package_name": "co.sepin.thedeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51330186482-2o5hibf75cfqpa5tqq8ranlht4ifdd2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.sepin.thedeal",
+            "certificate_hash": "a20f918f856b8efe7bfcf1cc4fccb9f111041465"
+          }
+        },
+        {
+          "client_id": "51330186482-c3308p0j2ksm7glr0rkstvp1buck0d8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0ny5jdTY-c4E7Dq4lPv5vXTlU6M08DGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51330186482-c3308p0j2ksm7glr0rkstvp1buck0d8m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

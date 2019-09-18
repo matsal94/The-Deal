@@ -1,0 +1,289 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">The Deal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_name">Nazwa użytkownika</string>
+    <string name="nav_header_telephone">Numer telefonu</string>
+
+    <string name="Home">Home</string>
+    <string name="main">Home</string>
+    <string name="settings">Ustawienia</string>
+    <string name="messages">Wiadomości</string>
+    <string name="calendar">Kalendarz</string>
+    <string name="businesscardholder">Wizytownik</string>
+    <string name="news">News\'y</string>
+    <string name="weather">Pogoda</string>
+    <string name="profil">Profil</string>
+
+    <string name="title_activity_registry">Rejestracja</string>
+    <string name="title_activity_login">Logowanie</string>
+    <string name="title_activity_main">Home</string>
+    <string name="title_activity_deal">Dodaj deal</string>
+    <string name="title_activity_message">Wiadomości</string>
+    <string name="title_activity_calendar">Kalendarz</string>
+    <string name="title_activity_add_event">Dodaj wydarzenie</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="title_activity_businesscardholder">Wizytownik</string>
+    <string name="title_activity_contact">Kontakt</string>
+    <string name="title_activity_select_contacts">Wybierz kontakt</string>
+    <string name="title_activity_weather">Pogoda</string>
+    <string name="title_activity_weather_maps">Mapa pogodowa</string>
+    <string name="title_activity_news">News\'y</string>
+    <string name="title_activity_profil">Profil</string>
+    <string name="title_activity_chat">Czat</string>
+    <string name="title_activity_settings">Ustawienia</string>
+
+    <string name="permission_SMS_denied">Brak dostępu do czytania SMS</string>
+    <string name="permission_SMS_access">Dostęp do czytania SMS został przydzielony</string>
+    <string name="permission_call_denied">Nie przydzielono dostępu na wykonywanie połączeń</string>
+    <string name="permission_contacts_access">Dostęp do czytania kontaków został przydzielony</string>
+    <string name="permission_contacts_denied">Brak dostępu do czytania kontaktów</string>
+    <string name="permission_localization_denied">Brak dostępu do lokalizacji</string>
+    <string name="permission_storage_denied">Brak dostępu do pamięci wewnętrznej urządzenia</string>
+    <string name="permission_camera_denied">Brak dostępu do aparatu</string>
+
+    <string name="rejestration">Zostałeś poprawnie zarejestrowany</string>
+    <string name="rejestration_failure">Nie zostałeś poprawnie zarejestrowany.</string>
+    <string name="veryfication">Zostałeś pomyślnie zweryfikowany</string>
+    <string name="veryfication_failure">Nie zostałeś pomyślnie zweryfikowany</string>
+    <string name="logout_successfull">Wylogowano pomyślnie</string>
+
+    <string name="not_Internet_connection">Sprawdź czy masz połączenie z Internetem</string>
+    <string name="no_Internet_connection">Brak połączenia z Internetem</string>
+    <string name="add_event">Dodano wydarzenie do kalendarza</string>
+    <string name="add_event_failure">Wydarzenie nie zostało dodane do kalendarza</string>
+    <string name="add_event_failure2">Nie można synchronizować wydarzenia. Sprawdź połączenie z Internetem.</string>
+    <string name="add_deal">Dodano deal</string>
+    <string name="add_deal_failure">Deal nie został dodany</string>
+    <string name="get_deals_failure">Nie można pobrać deal\'i</string>
+    <string name="not_locate_position">Nie można ustalić położenia</string>
+    <string name="not_locate_marker_position">Nie można ustalić adresu markera</string>
+    <string name="no_select_position">Nie wybrano żadnej pozycji</string>
+    <string name="no_load_image">Nie udało się wczytać zdjęcia</string>
+    <string name="passSave">Hasło zostało zapisane</string>
+    <string name="passNotSave">Hasło nie zostało zapisane</string>
+    <string name="no_select_photo">Nie wybrano zdjęcia</string>
+    <string name="no_take_photo">Nie wykonano zdjęcia</string>
+    <string name="incorrect_number_format">Niepoprawny format numeru telefonu</string>
+    <string name="limit">Limit SMS dla Twojego numeru został przekroczony</string>
+    <string name="send_SMS_invite">Wyślij SMS z zaproszeniem do aplikacji</string>
+    <string name="SMS_invite">zaprasza Cię do korzystania z aplikacji TheDeal.</string>
+    <string name="invite">Zaproś</string>
+    <string name="invitation_sent">Zaproszenie zostało wysłane</string>
+
+    <string name="error_number2">Podaj poprawny numer telefonu</string>
+    <string name="error_number">Podaj poprawny numer kierunkowy</string>
+    <string name="error_take_photo">Błąd podczas wykonywania zdjęcia</string>
+    <string name="errorCode">Podaj poprawny kod składający się z 6 cyfr</string>
+    <string name="add_error">Musisz wypełnić to pole</string>
+
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="registry">Zarejestruj</string>
+    <string name="registry_hint">Numer telefonu</string>
+
+    <string name="code_hint">Twój kod weryfikacyjny</string>
+    <string name="upload_picture_option">Wybierz sposób w jaki chcesz dodać zdjęcie:</string>
+    <string name="verification_title">Za chwilę otrzymasz SMS z\nkodem weryfikacyjnym.\nKod zostanie automatycznie wczytany.</string>
+    <string name="verification_title2">Za chwilę otrzymasz SMS z\nkodem weryfikacyjnym.\nWpisz kod w poniższe pole.</string>
+    <string name="registryTV">Rejestracja użytkownika</string>
+    <string name="tmpButton">></string>
+    <string name="exit">Na pewno chcesz się wylogować?</string>
+    <string name="exit_yes">Tak</string>
+    <string name="exit_no">Nie</string>
+    <string name="send_again">Wyślij ponownie SMS</string>
+    <string name="add_new_deal">Dodaj nowy deal</string>
+    <string name="addDeal_header">Tytuł deal\'a</string>
+    <string name="deal_body">Treść deal\'a</string>
+    <string name="post_deal">Dodaj deal</string>
+    <string name="category">Kategoria deal\'a</string>
+    <string name="search">Szukaj</string>
+    <string name="title">Tytuł</string>
+    <string name="time">Czas</string>
+    <string name="description">Opis</string>
+    <string name="name">Imię</string>
+    <string name="telephone">Telefon</string>
+    <string name="surname">Nazwisko</string>
+    <string name="email">Email</string>
+    <string name="email_address" tools:ignore="Typos">Adres email</string>
+    <string name="calendar_name">Nazwa wydarzenia</string>
+    <string name="calendar_date">Data</string>
+    <string name="hour">Godzina</string>
+    <string name="today">Dzisiaj</string>
+    <string name="veryfication_hint">Kod weryfikacyjny</string>
+    <string name="login">Zaloguj</string>
+    <string name="color">Kolor</string>
+    <string name="plus">+</string>
+    <string name="chooseColor">Wybierz kolor</string>
+    <string name="hand_input_text">Wprowadź kod ręcznie</string>
+    <string name="save">Zapisz</string>
+    <string name="registry_subtitle">Wybierz numer kierunkowy kraju oraz wprowadź numer telefonu</string>
+    <string name="comment">Komentarz do miejsca</string>
+    <string name="map_search">Podaj adres, miasto lub kod pocztowy</string>
+    <string name="event_details">Szczegóły wydarzenia</string>
+    <string name="calendar_localization">Dotknij, aby wybrać miejsce z mapy</string>
+    <string name="place_of_event">Miejsce wydarzenia</string>
+    <string name="logout">Wyloguj</string>
+    <string name="today_weather">Dzisiejsza pogoda</string>
+    <string name="humidity">Wilgotność powietrza</string>
+    <string name="sunrise">Wschód słońca</string>
+    <string name="sunset">Zachód słońca</string>
+    <string name="geo_coords">Współrzędne miejsca</string>
+    <string name="actual_weather">Aktualna pogoda</string>
+    <string name="now">Teraz</string>
+    <string name="five_days">5 dni</string>
+    <string name="my_localization">Moja lokalizacja</string>
+    <string name="telephone_number">Numer telefonu</string>
+    <string name="profil_edit">Edytuj profil</string>
+    <string name="about_me">O mnie</string>
+    <string name="profil_anuluj">Anuluj</string>
+    <string name="camera">Aparat</string>
+    <string name="gallery">Galeria</string>
+    <string name="call">Zadzwoń</string>
+    <string name="message">Napisz wiadomość</string>
+    <string name="error">Błąd</string>
+
+    <string name="north_east">Pn.-wsch.</string>
+    <string name="east">Wschodni</string>
+    <string name="south_east">Pd.-wsch.</string>
+    <string name="south">Południowy</string>
+    <string name="south_west">Pd.-zach.</string>
+    <string name="west">Zachodni</string>
+    <string name="north_west">Pn.-zach.</string>
+    <string name="north">Północny</string>
+
+    <string name="technology">Technologia</string>
+    <string name="business">Biznes</string>
+    <string name="general">Ogólne</string>
+    <string name="entertainment">Rozrywka</string>
+    <string name="health">Zdrowie</string>
+    <string name="science">Nauka</string>
+    <string name="sports">Sport</string>
+
+
+    <string name="share">Udostępnij</string>
+    <string name="add">Dodaj</string>
+    <string name="refresh">Odśwież</string>
+    <string name="selected">Wybrano:&#160;</string>
+    <string name="checking_contacts">Trwa sprawdzanie kontaktów..</string>
+    <string name="sending_image">Trwa ładowanie zdjęcia</string>
+    <string name="stoppingUpload">Utracono połączenie z Internetem. \nPrzywróć połączenie, aby dokończyć przesyłanie.</string>
+
+
+    <string name="clouds">chmury</string>
+    <string name="overcast_clouds">zachmurzone niebo</string>
+    <string name="temperature">temperatura</string>
+    <string name="precipitations">opady</string>
+    <string name="wind">wiatr</string>
+    <string name="pressure">ciśnienie</string>
+    <string name="clear_sky">czyste niebo</string>
+
+    <string name="few_clouds">kilka chmur</string>
+    <string name="scattered_clouds">rozproszone chmury</string>
+    <string name="broken_clouds">złamane chmury</string>
+    <string name="shower_rain">kapuśniaczek</string>
+    <string name="rain">deszcz</string>
+    <string name="snow">śnieg</string>
+
+    <string name="thunderstorm_with_light_rain">burza z lekkim deszczem</string>
+    <string name="thunderstorm_with_rain">burza z deszczem</string>
+    <string name="thunderstorm_with_heavy_rain">burza z ulewnym deszczem</string>
+    <string name="light_thunderstorm">lekka burza z piorunami</string>
+    <string name="thunderstorm">burza z piorunami</string>
+    <string name="heavy_thunderstorm">mocna burza z piorunami</string>
+    <string name="ragged_thunderstorm">poszarpana burza z piorunami</string>
+
+    <string name="thunderstorm_with_light_drizzle">burza z lekką mżawką</string>
+    <string name="thunderstorm_with_drizzle">burza z mżawką</string>
+    <string name="thunderstorm_with_heavy_drizzle">burza z silną mżawką</string>
+    <string name="light_intensity_drizzle">lekka mżawka</string>
+    <string name="drizzle">mżawka</string>
+    <string name="heavy_intensity_drizzle">intensywna mżawka</string>
+    <string name="light_intensity_drizzle_rain">lekka mżawka/deszcz	</string>
+    <string name="drizzle_rain">deszcz mżący</string>
+    <string name="heavy_intensity_drizzle_rain">intensywny deszcz mżący</string>
+    <string name="shower_rain_and_drizzle">deszcz i mżawka</string>
+
+    <string name="heavy_shower_rain_and_drizzle">ulewny deszcz i mżawka</string>
+    <string name="shower_drizzle">kapuśniaczkowa mżawka</string>
+    <string name="light_rain">lekki deszcz</string>
+    <string name="moderate_rain">umiarkowane opady</string>
+    <string name="heavy_intensity_rain">intensywny deszcz</string>
+    <string name="very_heavy_rain">bardzo intensywny deszcz</string>
+    <string name="extreme_rain">ekstremalny deszcz</string>
+    <string name="freezing_rain">marznący deszcz</string>
+    <string name="light_intensity_shower_rain">mało intensywny kapuśniaczek</string>
+
+    <string name="heavy_intensity_shower_rain">intensywny kapuśniaczek</string>
+    <string name="ragged_shower_rain">poszarpany kapuśniaczek</string>
+    <string name="light_snow">lekkie opady śniegu</string>
+    <string name="Snow">śnieg</string>
+    <string name="Heavy_snow">duże opady śniegu</string>
+    <string name="Sleet">śnieg z deszczem</string>
+    <string name="Light_shower_sleet">lekki kapuśniaczek ze śniegiem</string>
+    <string name="Shower_sleet">kapuśniaczek ze śniegiem</string>
+    <string name="Light_rain_and_snow">lekki deszcz ze śniegiem</string>
+
+    <string name="Rain_and_snow">deszcz ze śniegiem</string>
+    <string name="Light_shower_snow">lekki kapuśniaczek ze śniegiem</string>
+    <string name="Shower_snow">kapuśniaczek ze śniegiem</string>
+    <string name="Heavy_shower_snow">duże opady śniegu z kapuśniaczkiem</string>
+    <string name="mist">zamglenie</string>
+    <string name="Smoke">dym</string>
+    <string name="Haze">mgła</string>
+    <string name="haze">mgła</string>
+    <string name="sand_dust_whirls">piasek/pył</string>
+    <string name="fog">mgła</string>
+    <string name="sand">piasek</string>
+    <string name="dust">kurz</string>
+
+    <string name="volcanic_ash">pył wulkaniczny</string>
+    <string name="squalls">szkwał</string>
+    <string name="tornado">tornado</string>
+    <string name="few_clouds_11_25">kilka chmur: 11–25%</string>
+    <string name="scattered_clouds_25_50">rozproszone chmury: 25–50%</string>
+    <string name="broken_clouds_51_84">złamane chmury: 51–84%</string>
+    <string name="overcast_clouds_85_100">zachmurzone chmury: 85–100%</string>
+    <string name="write">napisz</string>
+    <string name="deleted_deal">Usunięto deal</string>
+    <string name="you">Ty</string>
+
+    <string name="me">Ja</string>
+    <string name="deleting_contact">Trwa usuwanie kontaktu</string>
+    <string name="status">status</string>
+    <string name="input_message">Wpisz wiadomość tutaj</string>
+    <string name="remove_event_from_calendar">Usunięto wydarzenie z kalendarza</string>
+    <string name="not_remove_event">Nie można usunąć wydarzenia</string>
+    <string name="send_email_to">Wyślij adres email do:</string>
+    <string name="no_mail_app_on_phone">Brak aplikacji pocztowych na urządzeniu</string>
+    <string name="last_seen">Ostatnio widziany:</string>
+    <string name="db_error">Błąd bazy danych.</string>
+    <string name="registry_SMS_information">Jeżeli zostaniesz poprawnie zarejestrowany, możesz otrzymać SMS-a w celu weryfikacji. Mogą obowiązywać stawki za SMS-y i tranfer danych.</string>
+    <string name="search_city">Szukaj miasta</string>
+    <string name="weather_map">Mapa pogodowa</string>
+    <string name="not_city">To nie jest miasto</string>
+
+
+    <string name="pref_title_display_name">Nazwa użytkownika</string>
+    <string name="pref_title_weather_localization">Pogoda na podstawie lokalizacji</string>
+    <string name="pref_summary_weather_localization">Pogoda będzię wyświetlana dla miejsca, w którym aktualnie przebywasz</string>
+    <string name="pref_title_weather_scale">Skala temperatury</string>
+
+    <string-array name="pref_weather_scales_list">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+    <string-array name="pref_weather_values_list">
+        <item>Metric</item>
+        <item>Imperial</item>
+        <item>Default</item>
+    </string-array>
+
+    type message here...
+
+</resources>

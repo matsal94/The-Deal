@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_detailSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".EventDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event_detail_backgroundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/event_detail_closeIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin2"
+            android:background="@drawable/ripple"
+            android:foregroundGravity="left"
+            android:onClick="onClickClose"
+            android:padding="@dimen/fab_margin2"
+            app:layout_constraintBottom_toBottomOf="@+id/event_detail_headerTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/event_detail_headerTV"
+            app:srcCompat="@drawable/ic_close_white"
+            tools:ignore="ContentDescription,MissingConstraints,OnClick" />
+
+        <TextView
+            android:id="@+id/event_detail_headerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin3"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/event_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/detail_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/event_detail_nameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin2"
+            android:fontFamily="@font/nunito_bold"
+            android:lineSpacingMultiplier="0.8"
+            android:text="Nazwa"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_small_bold_size"
+            android:transitionName="nameTransition"
+            app:layout_constraintBottom_toTopOf="@+id/event_detail_dateTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/event_detail_dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Data"
+            android:textColor="@color/white"
+            android:textSize="@dimen/detail_text_size"
+            android:transitionName="dateTransition"
+            app:layout_constraintBottom_toTopOf="@+id/event_detailIV"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/event_detailIV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="230dp"
+            android:background="@drawable/rounded_top_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/event_detail_mapView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:paddingBottom="@dimen/fab_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/event_detailIV" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/event_detail_descriptionMET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin2"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/fab_margin2"
+            android:enabled="false"
+            android:fontFamily="@font/nunito"
+            android:gravity="start"
+            android:textSize="@dimen/detail_big_text_size"
+            android:transitionName="descriptionTransition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_detail_addressMET"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelAlwaysShown="true"
+            app:met_floatingLabelText="@string/description"
+            app:met_hideUnderline="true"
+            app:met_iconLeft="@drawable/baseline_event_note_black_48"
+            app:met_iconPadding="@dimen/fab_margin2"
+            app:met_textColor="@color/colorDisabled" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/event_detail_addressMET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin2"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/fab_margin2"
+            android:enabled="false"
+            android:fontFamily="@font/nunito"
+            android:gravity="start"
+            android:textSize="@dimen/detail_big_text_size"
+            android:transitionName="addressTransition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/event_detail_mapView"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelAlwaysShown="true"
+            app:met_floatingLabelText="@string/place_of_event"
+            app:met_hideUnderline="true"
+            app:met_iconLeft="@drawable/location_on_black_48"
+            app:met_iconPadding="@dimen/fab_margin2"
+            app:met_textColor="@color/colorDisabled" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

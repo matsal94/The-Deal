@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">240dp</dimen>
+    <dimen name="avatar_drawer_size">130dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin2">8dp</dimen>
+    <dimen name="fab_margin3">32dp</dimen>
+
+    <dimen name="title_big_size">44sp</dimen>
+    <dimen name="title_bold_size">32sp</dimen>
+    <dimen name="title_small_bold_size">24sp</dimen>
+    <dimen name="detail_big_text_size">22sp</dimen>
+    <dimen name="detail_text_size">18sp</dimen>
+
+    <dimen name="text_size1">10sp</dimen>
+    <dimen name="text_size2">20sp</dimen>
+    <dimen name="text_size3">30sp</dimen>
+    <dimen name="text_size4">40sp</dimen>
+    <dimen name="text_size5">50sp</dimen>
+    <dimen name="text_size6">60sp</dimen>
+    <dimen name="text_size7">70sp</dimen>
+
+    <integer name="animation_dur_low">200</integer>
+    <integer name="animation_dur_medium">300</integer>
+    <integer name="animation_dur_high">400</integer>
+
+    <dimen name="design_tab_text_size_2line" tools:override="true">24sp</dimen> //TabLayout w WeatherActivity
+
+</resources>

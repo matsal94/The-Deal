@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_weatherCV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/fab_margin2"
+    android:layout_marginEnd="@dimen/fab_margin2"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@color/colorTransparent"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_weatherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/fab_margin2"
+        android:paddingBottom="@dimen/fab_margin2">
+
+        <TextView
+            android:id="@+id/item_weather_dateTimeTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/koho_light"
+            android:text="Date"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/detail_big_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.github.pwittchen.weathericonview.WeatherIconView
+            android:id="@+id/item_weatherWIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_weather_dateTimeTV"
+            app:weatherIconColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/item_weather_temperatureTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/koho_light"
+            android:text="temperature"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/title_big_size"
+            app:layout_constraintBottom_toBottomOf="@+id/item_weatherWIV"
+            app:layout_constraintStart_toEndOf="@+id/item_weatherWIV"
+            app:layout_constraintTop_toTopOf="@+id/item_weatherWIV" />
+
+        <TextView
+            android:id="@+id/item_weather_descriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/koho_light"
+            android:gravity="end"
+            android:text="Description"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/detail_big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contactNSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/contactABL"
+    tools:context=".ContactActivity"
+    tools:showIn="@layout/activity_contact">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/contact_about_meMET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:fontFamily="@font/nunito"
+            android:gravity="start"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/detail_big_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profil_telephoneMET"
+            app:met_clearButton="false"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelAlwaysShown="true"
+            app:met_floatingLabelText="@string/about_me"
+            app:met_hideUnderline="true"
+            app:met_iconLeft="@drawable/outline_info_black_48"
+            app:met_iconPadding="@dimen/fab_margin2" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/contact_telephoneMET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginEnd="8dp"
+            android:enabled="false"
+            android:fontFamily="@font/nunito"
+            android:gravity="start"
+            android:text="@string/telephone"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/detail_big_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_clearButton="true"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelAlwaysShown="true"
+            app:met_floatingLabelText="@string/telephone_number"
+            app:met_hideUnderline="true"
+            app:met_iconLeft="@drawable/baseline_phone_black_48"
+            app:met_iconPadding="@dimen/fab_margin2"
+            app:met_textColor="@color/colorDisabled" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/contact_emailMET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="60dp"
+                android:enabled="false"
+                android:fontFamily="@font/nunito"
+                android:gravity="start"
+                android:text="@string/email"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/detail_big_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:met_clearButton="false"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelText="@string/email_address"
+                app:met_hideUnderline="true"
+                app:met_iconLeft="@drawable/outline_email_black_48"
+                app:met_iconPadding="@dimen/fab_margin2" />
+
+            <ImageButton
+                android:id="@+id/contact_share_emailIB"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/fab_margin2"
+                android:background="@drawable/ripple_accent"
+                android:onClick="onClickShareEmail"
+                android:padding="@dimen/fab_margin2"
+                android:src="@drawable/ic_share_blue"
+                app:layout_constraintBottom_toBottomOf="@id/contact_emailMET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/contact_emailMET"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/contact_callEfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="onClickCall"
+                android:text="@string/call"
+                android:textColor="@color/white"
+                android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+                android:transitionName="telTransition"
+                app:icon="@drawable/ic_call_blue"
+                app:iconTint="@color/colorAccent"
+                app:rippleColor="@color/colorAccent" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/contact_messageEfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="onClickMessage"
+                android:text="@string/write"
+                android:textColor="@color/white"
+                android:theme="@style/Theme.MaterialComponents"
+                android:transitionName="mesTransition"
+                app:icon="@drawable/ic_chat_blue"
+                app:iconTint="@color/colorAccent"
+                app:rippleColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:textColor="@color/textColorTertiary"
+            android:textSize="@dimen/detail_text_size"
+            android:layout_marginTop="@dimen/fab_margin3"
+            android:text="Deal'e użytkownika" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contactRV"
+            android:layout_marginTop="@dimen/fab_margin2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

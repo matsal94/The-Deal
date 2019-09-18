@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorDivider"
+    android:orientation="vertical"
+    app:cardCornerRadius="0dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_select_contacts_listCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple"
+        android:orientation="vertical"
+        android:padding="@dimen/fab_margin2"
+        tools:ignore="RtlSymmetry">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_select_contact_list_avatarCIV"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:civ_border_color="@color/colorAvatarBorder"
+            app:civ_border_width="3dp"
+            app:civ_circle_background_color="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/item_select_contact_list_avatarLetterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/nunito"
+            android:gravity="center"
+            android:text="L"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/title_big_size"
+            app:layout_constraintBottom_toBottomOf="@+id/item_select_contact_list_avatarCIV"
+            app:layout_constraintEnd_toEndOf="@+id/item_select_contact_list_avatarCIV"
+            app:layout_constraintStart_toStartOf="@+id/item_select_contact_list_avatarCIV"
+            app:layout_constraintTop_toTopOf="@+id/item_select_contact_list_avatarCIV" />
+
+        <TextView
+            android:id="@+id/item_select_contacts_list_nameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/fab_margin2"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_bold"
+            android:gravity="left"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/name"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/detail_big_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/item_select_contacts_listCPB"
+            app:layout_constraintStart_toEndOf="@+id/item_select_contact_list_avatarCIV"
+            app:layout_constraintTop_toTopOf="@+id/item_select_contact_list_avatarCIV"
+            tools:fontFamily="@font/nunito"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/item_select_contacts_list_telephoneTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin2"
+            android:fontFamily="@font/nunito"
+            android:text="@string/telephone"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toStartOf="@+id/item_select_contacts_listCPB"
+            app:layout_constraintStart_toStartOf="@+id/item_select_contacts_list_nameTV"
+            app:layout_constraintTop_toBottomOf="@+id/item_select_contacts_list_nameTV" />
+
+        <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+            android:id="@+id/item_select_contacts_listCPB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_cp2"
+            android:fontFamily="@font/koho_regular"
+            android:lineSpacingExtra="@dimen/fab_margin2"
+            android:text="@string/invite"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/detail_text_size"
+            android:visibility="gone"
+            app:finalCornerAngle="50dp"
+            app:initialCornerAngle="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/item_select_contacts_listMCB"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--
+                <com.dd.CircularProgressButton
+                    android:id="@+id/item_select_contacts_listCPB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_cp2"
+                    android:fontFamily="@font/koho_regular"
+                    android:lineSpacingExtra="@dimen/fab_margin2"
+                    android:text="@string/invite"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/detail_text_size"
+                    android:visibility="gone"
+                    app:finalCornerAngle="50dp"
+                    app:initialCornerAngle="50dp"
+                    app:cpb_iconComplete="@drawable/ic_action_accept"
+                    app:cpb_iconError="@drawable/ic_action_cancel"
+                    app:cpb_textIdle="@string/Upload"
+                    app:layout_constraintBottom_toBottomOf="@id/item_select_contacts_list_telephoneTV"
+                    app:layout_constraintEnd_toStartOf="@+id/item_select_contacts_listMCB"
+                    app:layout_constraintTop_toTopOf="@+id/item_select_contacts_list_nameTV" />-->
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/item_select_contacts_listMCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

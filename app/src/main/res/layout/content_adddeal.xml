@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addDealCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:background="@color/colorDivider"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".AddDealActivity"
+    tools:showIn="@layout/activity_adddeal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addDealLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/fab_margin2"
+            android:paddingEnd="@dimen/fab_margin2"
+            android:paddingBottom="@dimen/fab_margin2">
+
+            <Spinner
+                android:id="@+id/addDealSpn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addDeal_nameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin2"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/nunito_light"
+                android:singleLine="true"
+                android:text="Nazwa użytkownika"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/detail_text_size"
+                app:layout_constraintStart_toEndOf="@+id/addDeal_avatarCIV"
+                app:layout_constraintTop_toBottomOf="@+id/addDealSpn" />
+            <!--
+                        <TextView
+                            android:id="@+id/addDeal_categoryTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito"
+                            android:text="@string/category"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+                            android:textColor="@color/textColorSecondary"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addDeal_layout_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:errorTextAppearance="@style/error_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addDeal_avatarCIV">
+
+                <EditText
+                    android:id="@+id/addDeal_TitleET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fab_margin2"
+                    android:ems="10"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="@string/addDeal_header"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="textShortMessage|textCapWords"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textColor="@drawable/edittext_theme_to_white_background"
+                    android:textSize="@dimen/detail_big_text_size"
+                    app:backgroundTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UnusedAttribute" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addDeal_layout_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginTop="90dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:errorTextAppearance="@style/error_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addDeal_avatarCIV">
+
+                <EditText
+                    android:id="@+id/addDeal_descET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fab_margin2"
+                    android:ems="10"
+                    android:fontFamily="@font/nunito_light"
+                    android:hint="@string/deal_body"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:textColor="@drawable/edittext_theme_to_white_background"
+                    android:textSize="@dimen/detail_text_size"
+                    app:backgroundTint="@color/colorAccent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="UnusedAttribute" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/addDeal_avatarCIV"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/fab_margin2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_profil"
+                app:civ_border_color="@color/colorAvatarBorder"
+                app:civ_border_width="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!--
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addDeal_doneFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:onClick="onClickFab"
+            android:src="@drawable/done_black_48"
+            app:backgroundTint="@color/white"
+            app:borderWidth="2dp"
+            app:elevation="10dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/colorAccent"
+            tools:ignore="MissingConstraints" />-->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addDeal_doneEFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickFab"
+        android:text="@string/add"
+        android:textColor="@color/colorPrimary"
+        android:theme="@style/Theme.MaterialComponents"
+        app:borderWidth="2dp"
+        app:elevation="10dp"
+        app:icon="@drawable/ic_done_white"
+        app:iconTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/colorAccent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

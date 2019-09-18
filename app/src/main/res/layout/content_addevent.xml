@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addEvent_frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDivider"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddEventActivity"
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="46dp"
+    tools:layout_editor_absoluteY="0dp"
+    tools:showIn="@layout/activity_addevent">
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addEvent_doneEFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickDone"
+        android:text="@string/add"
+        android:textColor="@color/colorPrimary"
+        android:theme="@style/Theme.MaterialComponents"
+        app:borderWidth="2dp"
+        app:elevation="10dp"
+        app:icon="@drawable/ic_done_white"
+        app:iconTint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/colorAccent" />
+
+    <ScrollView
+        android:id="@+id/addEventSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addEventCL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addEvent_nameTIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/fab_margin"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:counterTextColor="@color/colorAccent"
+                app:errorTextAppearance="@style/error_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RelativeOverlap">
+
+                <EditText
+                    android:id="@+id/addEvent_nameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:hint="@string/calendar_name"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="text|textCapWords"
+                    android:maxLength="50"
+                    android:textColor="@drawable/edittext_theme_to_white_background"
+                    app:backgroundTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.64"
+                    tools:ignore="UnusedAttribute" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addEventCL2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                app:layout_constraintEnd_toStartOf="@+id/addEventCL3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/addEvent_dateIV"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/fab_margin2"
+                    android:layout_marginTop="20dp"
+                    android:padding="@dimen/fab_margin2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_date_gray"
+                    tools:ignore="ContentDescription" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addEvent_dateTIL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:layout_constraintStart_toEndOf="@+id/addEvent_dateIV"
+                    tools:ignore="RelativeOverlap"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <EditText
+                        android:id="@+id/addEvent_dateET"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:layout_toEndOf="@+id/addEvent_dateIV"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/nunito"
+                        android:gravity="center"
+                        android:hint="@string/calendar_date"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="none"
+                        android:textColor="@drawable/edittext_theme_to_white_background"
+                        app:backgroundTint="@color/colorAccent"
+                        tools:ignore="LabelFor,TextFields,UnusedAttribute" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addEventCL3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                android:layout_marginEnd="@dimen/fab_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/addEventCL2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RelativeOverlap">
+
+                <ImageView
+                    android:id="@+id/addEvent_timeIV"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/fab_margin2"
+                    android:layout_marginTop="20dp"
+                    android:padding="@dimen/fab_margin2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_time_gray"
+                    tools:ignore="ContentDescription"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addEvent_timeTIL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:errorTextAppearance="@style/error_appearance"
+                    app:layout_constraintStart_toEndOf="@+id/addEvent_timeIV"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/addEvent_timeET"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/fab_margin"
+                        android:layout_toEndOf="@+id/addEvent_timeIV"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/nunito"
+                        android:gravity="center"
+                        android:hint="@string/hour"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="none"
+                        android:textColor="@drawable/edittext_theme_to_white_background"
+                        app:backgroundTint="@color/colorAccent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        tools:ignore="LabelFor,UnusedAttribute" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/addEvent_addressIV"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/fab_margin2"
+                android:padding="@dimen/fab_margin2"
+                app:layout_constraintBottom_toBottomOf="@+id/addEvent_addressTIL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addEvent_addressTIL"
+                app:srcCompat="@drawable/ic_position_gray"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addEvent_addressTIL"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/fab_margin2"
+                android:layout_marginTop="190dp"
+                android:layout_marginEnd="@dimen/fab_margin"
+                app:errorTextAppearance="@style/error_appearance"
+                app:helperText="@string/calendar_localization"
+                app:helperTextTextColor="@color/textColorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/addEvent_address_clearIB"
+                app:layout_constraintStart_toEndOf="@id/addEvent_addressIV"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/addEvent_addressET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/nunito"
+                    android:hint="@string/place_of_event"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="textLongMessage"
+                    android:maxLength="430"
+                    android:onClick="onClickAddress"
+                    android:textColor="@drawable/edittext_theme_to_white_background"
+                    android:textSize="@dimen/detail_big_text_size"
+                    app:backgroundTint="@color/colorAccent"
+                    app:layout_constrainedWidth="true"
+                    tools:ignore="UnusedAttribute" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/addEvent_address_clearIB"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/fab_margin2"
+                android:background="@drawable/ripple"
+                android:onClick="onClickClearAddress"
+                android:src="@drawable/met_ic_clear"
+                app:layout_constraintBottom_toBottomOf="@+id/addEvent_addressTIL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addEvent_addressTIL"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addEvent_commentTIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fab_margin"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:counterTextColor="@color/colorAccent"
+                app:errorTextAppearance="@style/error_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/addEvent_descriptionTIL"
+                app:layout_constraintTop_toBottomOf="@+id/addEvent_addressTIL">
+
+                <EditText
+                    android:id="@+id/addEvent_commentET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="@font/nunito"
+                    android:hint="@string/comment"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="textShortMessage"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:textColor="@drawable/edittext_theme_to_white_background"
+                    app:backgroundTint="@color/colorAccent"
+                    tools:ignore="UnusedAttribute"
+                    tools:layout_editor_absoluteX="84dp"
+                    tools:layout_editor_absoluteY="274dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/addEvent_descriptionIV"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/fab_margin2"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="@dimen/fab_margin2"
+                app:layout_constraintBottom_toBottomOf="@+id/addEvent_descriptionTIL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addEvent_descriptionTIL"
+                app:srcCompat="@drawable/ic_description_gray"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addEvent_descriptionTIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fab_margin2"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginEnd="@dimen/fab_margin"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:counterTextColor="@color/colorAccent"
+                app:errorTextAppearance="@style/error_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/addEvent_descriptionIV"
+                app:layout_constraintTop_toBottomOf="@+id/addEvent_commentTIL"
+                tools:ignore="MissingConstraints,RelativeOverlap">
+
+                <EditText
+                    android:id="@+id/addEvent_descriptionET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:hint="@string/description"
+                    android:imeOptions="actionUnspecified"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:inputType="textMultiLine|textCapWords"
+                    android:maxLength="50"
+                    android:textColor="@drawable/edittext_theme_to_white_background"
+                    android:textSize="@dimen/detail_big_text_size"
+                    app:backgroundTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="UnusedAttribute" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/addEvent_colorIV"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="@dimen/fab_margin2"
+                android:padding="@dimen/fab_margin2"
+                app:layout_constraintBottom_toBottomOf="@+id/addEvent_colorTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addEvent_colorTV"
+                app:srcCompat="@drawable/ic_color_black"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/addEvent_colorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:fontFamily="@font/nunito"
+                android:text="@string/color"
+                android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.ExpandedMenu.Item"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/detail_big_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/addEvent_colorIB"
+                app:layout_constraintStart_toEndOf="@+id/addEvent_colorIV"
+                app:layout_constraintTop_toTopOf="@+id/addEvent_colorIB"
+                app:layout_constraintVertical_bias="0.533" />
+
+            <ImageButton
+                android:id="@+id/addEvent_colorIB"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClickColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addEvent_descriptionTIL"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

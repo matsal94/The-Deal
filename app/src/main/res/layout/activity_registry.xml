@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registryCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registry_background"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".RegistryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--
+        <ImageView
+            android:id="@+id/registry_logoIV"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/the_deal_logo" />-->
+
+        <TextView
+            android:id="@+id/registry_titleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/koho_regular"
+            android:gravity="center"
+            android:text="@string/registryTV"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/title_bold_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registry_logoIV" />
+
+        <TextView
+            android:id="@+id/registry_subtitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/koho_regular"
+            android:gravity="center"
+            android:text="@string/registry_subtitle"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/detail_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registry_titleTV" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/registryCL1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_edittext_layout"
+            android:padding="@dimen/fab_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registry_subtitleTV">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registry_telephoneTIL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingBottom="@dimen/fab_margin"
+                android:textColorHint="@color/colorDisabled"
+                app:errorTextAppearance="@style/error_appearance"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/registry_country_numberCCP"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/registry_telephoneET"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/koho_regular"
+                    android:hint="@string/registry_hint"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="numberDecimal"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="@drawable/edittext_theme"
+                    app:backgroundTint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:fontFamily="@font/nunito"
+                    tools:ignore="Autofill" />
+                <!--android:maxLength="9"-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/registry_country_numberCCP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:ccpDialog_backgroundColor="@color/white"
+                app:ccpDialog_fastScroller_bubbleColor="@color/colorAccent"
+                app:ccpDialog_fastScroller_handleColor="@color/colorAccent"
+                app:ccpDialog_searchEditTextTint="@color/colorAccent"
+                app:ccpDialog_showCloseIcon="true"
+                app:ccpDialog_textColor="@color/textColorTertiary"
+                app:ccp_arrowColor="@color/colorAccent"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_autoFormatNumber="true"
+                app:ccp_contentColor="@color/colorDisabled"
+                app:layout_constraintEnd_toStartOf="@+id/registry_telephoneTIL"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+            android:id="@+id/registryCPB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_cp"
+            android:fontFamily="@font/koho_regular"
+            android:lineSpacingExtra="@dimen/fab_margin2"
+            android:onClick="onClickRegistry"
+            android:text="@string/registry"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/detail_text_size"
+            app:finalCornerAngle="50dp"
+            app:initialCornerAngle="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registry_subtitleTV"
+            app:spinning_bar_color="@color/white"
+            app:spinning_bar_padding="0dp"
+            app:spinning_bar_width="4dp" />
+        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/registry_SMS_informationTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="12sp"
+        android:text="@string/registry_SMS_information"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
